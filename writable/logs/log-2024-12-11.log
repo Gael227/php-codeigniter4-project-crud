@@ -1,0 +1,343 @@
+INFO - 2024-12-11 01:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-11 01:41:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`)) in C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\pbd2\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\pbd2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\pbd2\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\pbd2\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\pbd2\app\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+#9 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+#10 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pbd2\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pbd2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\pbd2\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-11 01:41:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+[Method: POST, Route: JenisUjiController/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 01:41:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 01:41:11 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-11 01:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-11 01:47:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`)) in C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\pbd2\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\pbd2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\pbd2\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\pbd2\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\pbd2\app\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+#9 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+#10 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pbd2\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pbd2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\pbd2\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-11 01:47:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+[Method: POST, Route: JenisUjiController/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 01:47:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 01:47:37 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-11 01:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 01:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-11 01:57:26 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`)) in C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\pbd2\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\pbd2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\pbd2\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\pbd2\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\pbd2\app\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+#9 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+#10 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pbd2\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pbd2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\pbd2\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-11 01:57:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+[Method: POST, Route: JenisUjiController/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 01:57:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'adadasd\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'adadasd\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 01:57:26 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`uas_pbd`.`spesimen`, CONSTRAINT `spesimen_ibfk_1` FOREIGN KEY (`id_spesimen`) REFERENCES `transaksi_spesimen_temp` (`id_spesimennya`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'adadasd\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'adadasd\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'adadasd\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-11 06:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-11 06:13:53 --> mysqli_sql_exception: Unknown column 'status_spesimen' in 'field list' in C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\pbd2\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\pbd2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\pbd2\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\pbd2\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\pbd2\app\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+#9 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+#10 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pbd2\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pbd2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\pbd2\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-11 06:13:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_spesimen' in 'field list'
+[Method: POST, Route: JenisUjiController/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 06:13:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_spesimen' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 06:13:53 --> [Caused by] mysqli_sql_exception: Unknown column 'status_spesimen' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000000000\', \'100000000000\', \'adadads\', \'Aktif\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-11 06:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-11 06:14:01 --> mysqli_sql_exception: Unknown column 'status_spesimen' in 'field list' in C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\pbd2\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\pbd2\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\pbd2\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\pbd2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\pbd2\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\pbd2\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\pbd2\app\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+#9 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+#10 C:\xampp\htdocs\pbd2\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pbd2\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pbd2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\pbd2\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-11 06:14:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_spesimen' in 'field list'
+[Method: POST, Route: JenisUjiController/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 06:14:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_spesimen' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000\', \'100\', \'adadads\', \'Aktif\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000\', \'100\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-11 06:14:01 --> [Caused by] mysqli_sql_exception: Unknown column 'status_spesimen' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000\', \'100\', \'adadads\', \'Aktif\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000\', \'100\', \'adadads\', \'Aktif\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (\'dadadqas\', \'1000\', \'100\', \'adadads\', \'Aktif\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spesimen` (`nama_spesimen`, `harga_spesimen_umum`, `harga_spesimen_mahasiswa`, `satuan`, `status_spesimen`) VALUES (:nama_spesimen:, :harga_spesimen_umum:, :harga_spesimen_mahasiswa:, :satuan:, :status_spesimen:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\JenisUjiController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JenisUjiController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisUjiController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-11 06:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-11 06:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
